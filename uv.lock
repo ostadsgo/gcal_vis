@@ -1,0 +1,68 @@
+version = 1
+requires-python = ">=3.13"
+
+[[package]]
+name = "csv-ical"
+version = "2.1.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "icalendar" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e1/97/f21e2a216e40c6d4e83f207d3f884261674ac15a7e7e48475f08a7646639/csv_ical-2.1.2.tar.gz", hash = "sha256:d496270eb416669523db3e09a1eee7c06b044e533cc78e234ee7fe92de4afcc8", size = 5127 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/41/51/b07dc5d1efe9e9e0a6375326767b537e4c814ef24fa913972130110acc50/csv_ical-2.1.2-py3-none-any.whl", hash = "sha256:489e6f437462f474ac6387ba195fbe10f0c698237efce539dcc6d2ebdd9de5f6", size = 5107 },
+]
+
+[[package]]
+name = "gcal-vis"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "csv-ical" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "csv-ical", specifier = ">=2.1.2" }]
+
+[[package]]
+name = "icalendar"
+version = "4.1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "python-dateutil" },
+    { name = "pytz" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/84/b5/e126fa376115e276b43a21c783f820c13fc8bc45e838d144d71caf78a2fc/icalendar-4.1.1.tar.gz", hash = "sha256:c039dd73c71851495e874adb19280a17a3c88af8da290c4e3d50e2eb6db88099", size = 79608 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3f/a1/6160b9319609facbc4ad6cf4a3f4c6255eaaa3b1fe9ffed33301530db31a/icalendar-4.1.1-py2.py3-none-any.whl", hash = "sha256:f6fd6fcb2cdc63e0eca3f20fa3da50b1550982df906d73ddc4655314459168d0", size = 75690 },
+]
+
+[[package]]
+name = "python-dateutil"
+version = "2.9.0.post0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "six" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz", hash = "sha256:37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3", size = 342432 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl", hash = "sha256:a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427", size = 229892 },
+]
+
+[[package]]
+name = "pytz"
+version = "2024.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/3a/31/3c70bf7603cc2dca0f19bdc53b4537a797747a58875b552c8c413d963a3f/pytz-2024.2.tar.gz", hash = "sha256:2aa355083c50a0f93fa581709deac0c9ad65cca8a9e9beac660adcbd493c798a", size = 319692 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/11/c3/005fcca25ce078d2cc29fd559379817424e94885510568bc1bc53d7d5846/pytz-2024.2-py2.py3-none-any.whl", hash = "sha256:31c7c1817eb7fae7ca4b8c7ee50c72f93aa2dd863de768e1ef4245d426aa0725", size = 508002 },
+]
+
+[[package]]
+name = "six"
+version = "1.17.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz", hash = "sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81", size = 34031 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl", hash = "sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274", size = 11050 },
+]
