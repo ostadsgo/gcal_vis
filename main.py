@@ -1,6 +1,7 @@
 import csv
 import os
 from datetime import datetime
+from datetime import timedelta
 
 from csv_ical import Convert
 
@@ -68,27 +69,40 @@ def get_cal_events(calname):
     data = []
     for row in read_csv("csv/" + calname):
         event, start, end, desc, *_ = row
-        print(start, end)
         row = {}
         row["action"] = extract_action(event)
         row["project"] = extract_project(event)
         row["area"] = extract_area(event)
         row["tag"] = extract_tag(event)
         row["duration"] = calculate_duration(start, end)
-    
         data.append(row)
-
     return data
 
 
 def grouping():
     pass
 
+def parse_time(time_str):
+    hours, minutes, seconds = map(int, time_str.split(':'))
+    return timedelta(hours=hours, minutes=minutes, seconds=seconds)
+
+def get_subcalendar(events):
+    """ Calculate how much time spent on sub-calendar.
+        A sub-calendar is in form of `sub-calendar: event detail`
+    """
+
+def calendar_duration(events):
+    """Calculate how much time spend on a calendar."""
+    # durations in timedelta format
+    durations = [event.get("duration") for event in events]
+    total_duration = sum(durations, timedelta())
+    return total_duration
+
 
 def main():
     calendars = calendars_name_csv()
-    events = get_cal_events("biz.csv")
-    print(events)
+    events = get_cal_events("work.csv")
+    x = calendar_duration(events)
 
 
 if __name__ == "__main__":
